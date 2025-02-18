@@ -30,16 +30,24 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
 
-Gehe ins verzeichnis vom Projekt und build es 
+Gehe ins verzeichnis vom Projekt und build es (image)
 
 ```
 docker build -t my-nginx .
 ```
 
-starte das Projekt bzw. Webserver
+starte das Projekt/image bzw. Webserver in einem container
 
 ```
 docker run -d -p 8080:80 --name webserver my-nginx
+
+-d: detech also man kann kein Terminal verwenden (im Hintergrund laufen lassen)
+
+-p: für Portmaping (weiterleitungen der Ports)
+
+--name: Name des Containers 
+
+am schluss image name in diesem beispiel: my-nginx
 ```
 
 besuche die Seite
