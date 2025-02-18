@@ -219,6 +219,198 @@
             gemessen und wird geholt was gebraucht werden z.B Datenbank wenn ich
             sie nur brauche).
           </li>
+
+          <h1>Grundlagen Container-Technologie</h1>
+        <li>
+            Was ist Container-Technologie oder Container-Virtualisierung?
+            <ul>
+                <li>
+                    Container-Technologie oder Container-Virtualisierung ist eine Methode, um Software-Anwendungen und deren Abhängigkeiten so zu verpacken, dass sie überall gleich laufen – egal, ob auf einem Laptop, Server oder in der Cloud.
+                </li>
+                <li>
+                    Stell dir einen Container wie eine kleine, abgeschottete Box vor, in der alles drin ist, was eine Anwendung zum Laufen braucht: der Code, Bibliotheken und Einstellungen. Dadurch kann sie unabhängig vom Betriebssystem und der Umgebung ausgeführt werden.
+                </li>
+                <li>
+                    Das ist ähnlich wie bei einem Schiffscontainer: Egal, was darin transportiert wird, der Container passt überall – auf ein Schiff, einen Zug oder einen LKW. Genauso funktionieren Software-Container auf verschiedenen Systemen, ohne dass Anpassungen nötig sind.
+                </li>
+                <li>
+                    Ein bekanntes Beispiel für eine Container-Technologie ist Docker.
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            Was sind die Vor- und Nachteile der Container-Technologie zu virtuellen Servern (VM)?
+            <ul>
+                <li>
+                    <b>Kriterium</b>
+                    <ul>
+                        <li>Container</li>
+                        <li>Virtuelle Maschinen (VMs)</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Ressourcenverbrauch</b>
+                    <ul>
+                        <li>Geringer, da Container sich den Kernel teilen</li>
+                        <li>Höher, da jede VM ein eigenes OS benötigt</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Startzeit</b>
+                    <ul>
+                        <li>Sehr schnell (Sekunden)</li>
+                        <li>Langsam (Minuten), da komplettes OS geladen wird</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Portabilität</b>
+                    <ul>
+                        <li>Sehr hoch, da sie überall laufen, wo eine Container-Laufzeitumgebung vorhanden ist</li>
+                        <li>Eingeschränkt, da das gesamte OS migriert werden muss</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Isolation</b>
+                    <ul>
+                        <li>Gut, aber nicht so stark wie bei VMs</li>
+                        <li>Sehr stark, da jede VM ihr eigenes OS hat</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Sicherheit</b>
+                    <ul>
+                        <li>Potenziell anfälliger, da alle Container denselben Kernel teilen</li>
+                        <li>Höher, da jede VM ein isoliertes OS nutzt</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Flexibilität</b>
+                    <ul>
+                        <li>Hohe Skalierbarkeit und einfache Bereitstellung</li>
+                        <li>Weniger flexibel, aber gut für traditionelle Anwendungen geeignet</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Fazit:</b> Container sind ideal für Microservices-Architekturen und Cloud-native Anwendungen, während VMs besser für isolierte, monolithische oder ältere Anwendungen geeignet sind.
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            Welche Produkte kennen Sie im Zusammenhang mit virtuellen Servern und Container?
+            <ul>
+                <li>
+                    <b>Virtuelle Maschinen (VMs):</b>
+                    <ul>
+                        <li>VMware vSphere</li>
+                        <li>Microsoft Hyper-V</li>
+                        <li>KVM (Kernel-based Virtual Machine)</li>
+                        <li>VirtualBox</li>
+                        <li>Citrix XenServer</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Container-Technologie:</b>
+                    <ul>
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                        <li>Podman</li>
+                        <li>OpenShift</li>
+                        <li>LXC (Linux Containers)</li>
+                    </ul>
+                    <li>
+                        <b>Unterschiede zwischen VM und Container:</b>
+                        <ul>
+                            <li>
+                                <b>Bereitstellung:</b>
+                                <ul>
+                                    <li>Virtuelle Maschinen (VMs): Langsame Bereitstellung (Minuten)</li>
+                                    <li>Container: Schnelle Bereitstellung (Sekunden)</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Speicherplatz:</b>
+                                <ul>
+                                    <li>Virtuelle Maschinen (VMs): Größer, da jedes OS eigenständig läuft</li>
+                                    <li>Container: Kleiner, da Container sich das OS teilen</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Portabilität:</b>
+                                <ul>
+                                    <li>Virtuelle Maschinen (VMs): Weniger portabel, erfordert Migration ganzer VMs</li>
+                                    <li>Container: Sehr portabel, da nur der Container benötigt wird</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Effizienz:</b>
+                                <ul>
+                                    <li>Virtuelle Maschinen (VMs): Mehr Overhead durch OS-Instanzen</li>
+                                    <li>Container: Weniger Overhead, da nur Anwendungen virtualisiert werden</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Betriebssystem (Kernel):</b>
+                                <ul>
+                                    <li>Virtuelle Maschinen (VMs): Jede VM hat ein eigenes OS</li>
+                                    <li>Container: Alle Container teilen denselben Kernel</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Können virtuelle Server immer durch Container ersetzt werden?</b>
+                        <p>
+                            Container können virtuelle Maschinen (VMs) nicht immer ersetzen. Sie sind ideal für moderne, verteilte Anwendungen, die aus kleinen, unabhängigen Microservices bestehen. Container teilen sich das Betriebssystem des Hosts, was sie leicht und effizient macht. VMs hingegen bieten eine vollständige Isolation, da jede VM ihr eigenes Betriebssystem hat. Das ist wichtig für sichere oder monolithische Anwendungen, die schwer in kleine Container aufteilbar sind. Wenn eine Anwendung verschiedene Betriebssysteme benötigt, ist eine VM besser geeignet. Container starten schneller und verbrauchen weniger Ressourcen, während VMs mehr Speicher und Leistung brauchen. Für einfache Web-Apps oder Microservices sind Container perfekt. Für traditionelle, große Anwendungen oder hohe Sicherheitsanforderungen sind VMs oft die bessere Wahl. Ob Container oder VM – es kommt immer auf den Einsatzzweck an.
+                        </p>
+                    </li>
+                    <li>
+                        <b>Unterschied zwischen Self-Managed und Fully Managed:</b>
+                        <ul>
+                            <li>
+                                <b>Verwaltung:</b>
+                                <ul>
+                                    <li>Self-Managed: Unternehmen verwalten Infrastruktur selbst</li>
+                                    <li>Fully Managed: Cloud-Anbieter übernimmt Verwaltung</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Flexibilität:</b>
+                                <ul>
+                                    <li>Self-Managed: Hohe Anpassungsmöglichkeiten</li>
+                                    <li>Fully Managed: Eingeschränkte Anpassung</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Wartung:</b>
+                                <ul>
+                                    <li>Self-Managed: Eigenverantwortlich für Updates, Sicherheit & Skalierung</li>
+                                    <li>Fully Managed: Automatische Updates & Wartung durch Anbieter</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Kosten:</b>
+                                <ul>
+                                    <li>Self-Managed: Meist günstiger, aber hoher administrativer Aufwand</li>
+                                    <li>Fully Managed: Teurer, aber einfacher zu betreiben</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Beispiele:</b>
+                                <ul>
+                                    <li>Self-Managed: Eigenbetriebene Kubernetes-Cluster</li>
+                                    <li>Fully Managed: AWS Fargate, Google Kubernetes Engine (GKE), Azure Kubernetes Service (AKS)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p>
+                            <b>Fazit:</b> Self-Managed ist gut für Unternehmen, die volle Kontrolle und Flexibilität benötigen. Fully Managed eignet sich für Firmen, die sich auf ihre Anwendungen konzentrieren wollen und weniger administrativen Aufwand wünschen.
+                        </p>
+                    </li>
+                </li>
+            </ul>
+        </li>
         </ul>
         <br />
       </li>
