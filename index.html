@@ -1,142 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-<header>Lecaj, Fano, Leonhardt</header>
-<h1>Cloud Vorwissen</h1>
+  </head>
+  <body>
+    <header>Lecaj, Fano, Leonhardt</header>
+    <h1>Cloud Vorwissen</h1>
 
-<ul>
-    <li>AWS</li>
-    <li>EC2-Instanzen</li>
-    <li>S3-Buckets</li>
-    <li>VPC</li>
-    <li>Subnetze</li>
-    <li>Azure</li>
-    <li>Load Balancer</li>
-    <li>Backup</li>
-    <li>IAAS</li>
-    <li>SAAS</li>
-    <li>PAAS</li>
-    <li>FAAS</li>
-    <li>BAAS</li>
-    <li>Port Forwarding</li>
-    <li>cloud-init</li>
-    <li>IAM</li>
-    <li>Terraform</li>
-    <li>Linux/GNU</li>
-    <li>Skalierung (Horizontal/Vertikal)</li>
-    <li>Container</li>
-    <li>Container Images</li>
-    <li>Hypervisor Typ 1 & Typ 2</li>
-</ul>
-
-<img src="bild.png">
-
-
-<h1>Aufgabe 1.2 Grundlagen Cloud-Computing</h1>
-
-<ul>
-    <li>Wie ist der Begriff Cloud entstanden? Wieso heisst es Cloud?</li>
-    <br>
     <ul>
-        <li>Stammt aus Netzwerkdiagrammen, wo das Internet als <b>Wolke</b> dargestellt wurde.
-        <li>Steht für <b>virtuelle, abstrakte IT-Infrastruktur.</b>
+      <li>AWS</li>
+      <li>EC2-Instanzen</li>
+      <li>S3-Buckets</li>
+      <li>VPC</li>
+      <li>Subnetze</li>
+      <li>Azure</li>
+      <li>Load Balancer</li>
+      <li>Backup</li>
+      <li>IAAS</li>
+      <li>SAAS</li>
+      <li>PAAS</li>
+      <li>FAAS</li>
+      <li>BAAS</li>
+      <li>Port Forwarding</li>
+      <li>cloud-init</li>
+      <li>IAM</li>
+      <li>Terraform</li>
+      <li>Linux/GNU</li>
+      <li>Skalierung (Horizontal/Vertikal)</li>
+      <li>Container</li>
+      <li>Container Images</li>
+      <li>Hypervisor Typ 1 & Typ 2</li>
     </ul>
-    <br>
-    <li>Wie wird der Begriff Cloud definiert, z.B. gemäss NIST?
-    <br>
-        <p>Cloud Computing ist ein Modell für den allgegenwärtigen, bequemen und bedarfsgerechten Netzzugang zu einem <b>gemeinsam genutzten 
-            Pool konfigurierbarer Computerressourcen (z. B. Netzwerke, Server, Speicher, Anwendungen und Dienste)</b>, die 
-            schnell und mit minimalem Verwaltungsaufwand oder Interaktion mit dem Dienstanbieter bereitgestellt und freigegeben werden können. 
-            Dieses Cloud-Modell besteht aus fünf wesentlichen Merkmalen, drei Dienstmodellen und vier Bereitstellungsmodellen 
-            Modellen.</p>
-    <br>
-    <li>Welche Cloud Dienstleistungen kennen Sie?
-    <br>
+
+    <img src="bild.png" />
+
+    <h1>Aufgabe 1.2 Grundlagen Cloud-Computing</h1>
+
     <ul>
-        <li>Speicher (Dropbox, Google Drive).
-        <li>Rechenleistung (AWS EC2, Azure VM).
-        <li>Datenbanken (AWS RDS, Google Cloud SQL).
-        <li>KI-Services (Google AI, AWS SageMaker).
-        <li>SaaS (Microsoft 365, Salesforce).
-    </ul>
-    <br>
-    <li>Welche Cloud Anbieter kennen Sie?
-    <br>
-    <ul>
-        <li>Grosse Anbieter: AWS, Microsoft Azure, Google Cloud.
-        <li>Weitere: IBM Cloud, Oracle Cloud, Alibaba Cloud.
-    </ul>
-    <br>
-    <li>Welche Cloud Deployment Modelle kennen Sie?
-    <br>
-   <ul>
-        <li>Public Cloud: Wird von Dritten betrieben und für viele Kunden öffentlich bereitgestellt (z. B. AWS, Google Cloud).
-        <li>Private Cloud: Eine Cloud-Umgebung, die exklusiv für eine Organisation betrieben wird, entweder On-Premise oder bei einem Anbieter.
-        <li>Hybrid Cloud: Kombination aus Public und Private Cloud, um Flexibilität und Sicherheit zu bieten.
-        <li>Community Cloud: Eine spezielle Cloud für eine bestimmte Branche oder Organisationen mit ähnlichen Anforderungen.
-   </ul>
-    <br>
-    <li>Was sind Cloud Service Modelle?    
-    <br>
-    <ul>
-        <li>Infrastructure as a Service (IaaS): Bereitstellung von Hardware-Ressourcen (Server, Speicher, Netzwerk). Beispiel: AWS EC2, Google Compute Engine.
-        <li>Platform as a Service (PaaS): Entwicklungs- und Laufzeitumgebungen für Anwendungen. Beispiel: Google App Engine, Microsoft Azure App Services.
-        <li>Software as a Service (SaaS): Vollständig gehostete Anwendungen, die direkt genutzt werden können. Beispiel: Gmail, Salesforce, Microsoft 365.
-    </ul>
-    <br>
-    <li>Weshalb soll ich Dienste aus der Cloud beziehen? Was sind die Vorteile?
-    <br>
-    <b>Vorteile der Cloud</b>
-       <ul>
-            <li>Kosteneffizient (weniger Hardware).
-            <li>Skalierbar (flexible Anpassung).
-            <li>Überall zugänglich (Internetverbindung).
-            <li>Automatische Updates & Sicherheit.
-       </ul>
-    <br>
-    <li>Was sind die Nachteile?
-    <br>
-    <ul>
-        <li>Abhängigkeit vom Anbieter (Lock-in).
-        <li>Datenschutz & Compliance-Herausforderungen.
-        <li>Internetabhängigkeit (kein Netz, kein Zugriff).
-        <li>Laufende Kosten durch Abo-Modelle.
-   </ul>
-    <br>
-    <li>Welche Dienstleistungen werden in Ihrem Betrieb On-Premise (eigenes Rechenzentrum) betrieben?
-    <br>
+      <li>Wie ist der Begriff Cloud entstanden? Wieso heisst es Cloud?</li>
+      <br />
+      <ul>
+        <li>
+          Stammt aus Netzwerkdiagrammen, wo das Internet als
+          <b>Wolke</b> dargestellt wurde.
+        </li>
+        <li>Steht für <b>virtuelle, abstrakte IT-Infrastruktur.</b></li>
+      </ul>
+
+      <br />
+      <li>
+        Wie wird der Begriff Cloud definiert, z.B. gemäss NIST?
+        <br />
+        <p>
+          Cloud Computing ist ein Modell für den allgegenwärtigen, bequemen und
+          bedarfsgerechten Netzzugang zu einem
+          <b
+            >gemeinsam genutzten Pool konfigurierbarer Computerressourcen (z. B.
+            Netzwerke, Server, Speicher, Anwendungen und Dienste)</b
+          >, die schnell und mit minimalem Verwaltungsaufwand oder Interaktion
+          mit dem Dienstanbieter bereitgestellt und freigegeben werden können.
+          Dieses Cloud-Modell besteht aus fünf wesentlichen Merkmalen, drei
+          Dienstmodellen und vier Bereitstellungsmodellen Modellen.
+        </p>
+        <br />
+      </li>
+
+      <li>
+        Welche Cloud Dienstleistungen kennen Sie?
+        <br />
         <ul>
-            <li>Kritische Geschäftsanwendungen (ERP, Finanzsysteme).
-            <li>Legacy-Systeme.
-            <li>Interne Datenbanken mit hohen Sicherheitsanforderungen.
+          <li>Speicher (Dropbox, Google Drive).</li>
+          <li>Rechenleistung (AWS EC2, Azure VM).</li>
+          <li>Datenbanken (AWS RDS, Google Cloud SQL).</li>
+          <li>KI-Services (Google AI, AWS SageMaker).</li>
+          <li>SaaS (Microsoft 365, Salesforce).</li>
         </ul>
-    <br>
-    <li>Wie werden technologische Beiträge in der Cloud geteilt bzw. zur Verfügung gestellt?
-    <br>
-    <ul>
-        <li>APIs (Schnittstellen für externe Anwendungen).
-        <li>Container & Microservices (Docker, Kubernetes).
-        <li>Repositories & Versionierung (GitHub, GitLab).
-        <li>CDN (Cloudflare, AWS CloudFront für schnelle Bereitstellung).
-        <li>Serverless Computing (AWS Lambda, Azure Functions).
+
+        <br />
+      </li>
+
+      <li>
+        Welche Cloud Anbieter kennen Sie?
+        <br />
+        <ul>
+          <li>Grosse Anbieter: AWS, Microsoft Azure, Google Cloud.</li>
+          <li>Weitere: IBM Cloud, Oracle Cloud, Alibaba Cloud.</li>
+        </ul>
+
+        <br />
+      </li>
+
+      <li>
+        Welche Cloud Deployment Modelle kennen Sie?
+        <br />
+        <ul>
+          <li>
+            Public Cloud: Wird von Dritten betrieben und für viele Kunden
+            öffentlich bereitgestellt (z. B. AWS, Google Cloud).
+          </li>
+          <li>
+            Private Cloud: Eine Cloud-Umgebung, die exklusiv für eine
+            Organisation betrieben wird, entweder On-Premise oder bei einem
+            Anbieter.
+          </li>
+          <li>
+            Hybrid Cloud: Kombination aus Public und Private Cloud, um
+            Flexibilität und Sicherheit zu bieten.
+          </li>
+          <li>
+            Community Cloud: Eine spezielle Cloud für eine bestimmte Branche
+            oder Organisationen mit ähnlichen Anforderungen.
+          </li>
+        </ul>
+
+        <br />
+      </li>
+
+      <li>
+        Was sind Cloud Service Modelle?
+        <br />
+        <ul>
+          <li>
+            Infrastructure as a Service (IaaS): Bereitstellung von
+            Hardware-Ressourcen (Server, Speicher, Netzwerk). Beispiel: AWS EC2,
+            Google Compute Engine.
+          </li>
+          <li>
+            Platform as a Service (PaaS): Entwicklungs- und Laufzeitumgebungen
+            für Anwendungen. Beispiel: Google App Engine, Microsoft Azure App
+            Services.
+          </li>
+          <li>
+            Software as a Service (SaaS): Vollständig gehostete Anwendungen, die
+            direkt genutzt werden können. Beispiel: Gmail, Salesforce, Microsoft
+            365.
+          </li>
+        </ul>
+
+        <br />
+      </li>
+
+      <li>
+        Weshalb soll ich Dienste aus der Cloud beziehen? Was sind die Vorteile?
+        <br />
+        <b>Vorteile der Cloud</b>
+        <ul>
+          <li>Kosteneffizient (weniger Hardware).</li>
+          <li>Skalierbar (flexible Anpassung).</li>
+          <li>Überall zugänglich (Internetverbindung).</li>
+          <li>Automatische Updates & Sicherheit.</li>
+        </ul>
+
+        <br />
+      </li>
+
+      <li>
+        Was sind die Nachteile?
+        <br />
+        <ul>
+          <li>Abhängigkeit vom Anbieter (Lock-in).</li>
+          <li>Datenschutz & Compliance-Herausforderungen.</li>
+          <li>Internetabhängigkeit (kein Netz, kein Zugriff).</li>
+          <li>Laufende Kosten durch Abo-Modelle.</li>
+        </ul>
+
+        <br />
+      </li>
+
+      <li>
+        Welche Dienstleistungen werden in Ihrem Betrieb On-Premise (eigenes
+        Rechenzentrum) betrieben?
+        <br />
+        <ul>
+          <li>Kritische Geschäftsanwendungen (ERP, Finanzsysteme).</li>
+          <li>Legacy-Systeme.</li>
+          <li>Interne Datenbanken mit hohen Sicherheitsanforderungen.</li>
+        </ul>
+
+        <br />
+      </li>
+
+      <li>
+        Wie werden technologische Beiträge in der Cloud geteilt bzw. zur
+        Verfügung gestellt?
+        <br />
+        <ul>
+          <li>APIs (Schnittstellen für externe Anwendungen).</li>
+          <li>Container & Microservices (Docker, Kubernetes).</li>
+          <li>Repositories & Versionierung (GitHub, GitLab).</li>
+          <li>CDN (Cloudflare, AWS CloudFront für schnelle Bereitstellung).</li>
+          <li>Serverless Computing (AWS Lambda, Azure Functions).</li>
+        </ul>
+
+        <br />
+      </li>
+
+      <li>
+        Welches sind die 5 Merkmale einer Cloud?
+        <br />
+        <ul>
+          <li>On-Demand Self-Service (automatische Bereitstellung).</li>
+          <li>
+            Breiter Netzwerkzugriff (überall erreichbar, es soll schnell für den
+            user sein (Fetter Internet Zugang)).
+          </li>
+          <li>
+            Ressourcen-Pooling (geteilte Infrastruktur, Haufen Server
+            zusammensetzen).
+          </li>
+          <li>
+            Schnelle Elastizität (flexible Skalierung sei es horizontal oder
+            Vertikal).
+          </li>
+          <li>
+            Messbarer Dienst (verbrauchsbasierte Abrechnung, Nutzung wird
+            gemessen und wird geholt was gebraucht werden z.B Datenbank wenn ich
+            sie nur brauche).
+          </li>
+        </ul>
+        <br />
+      </li>
     </ul>
-    <br>
-    <li>Welches sind die 5 Merkmale einer Cloud?
-    <br>
-    <ul>
-        <li>On-Demand Self-Service (automatische Bereitstellung).
-        <li>Breiter Netzwerkzugriff (überall erreichbar).
-        <li>Ressourcen-Pooling (geteilte Infrastruktur).
-        <li>Schnelle Elastizität (flexible Skalierung).
-        <li>Messbarer Dienst (verbrauchsbasierte Abrechnung).</li>
-    </ul>
-    <br>
-</ul>
-</body>
+  </body>
 </html>
