@@ -7,6 +7,7 @@
   </head>
   <body>
     <header>Lecaj, Fano, Leonhardt</header>
+    
     <h1>Cloud Vorwissen</h1>
 
     <ul>
@@ -407,6 +408,72 @@
                         <p>
                             <b>Fazit:</b> Self-Managed ist gut für Unternehmen, die volle Kontrolle und Flexibilität benötigen. Fully Managed eignet sich für Firmen, die sich auf ihre Anwendungen konzentrieren wollen und weniger administrativen Aufwand wünschen.
                         </p>
+                        <h1>Aufgabe 4.1</h1>
+                        <li>
+                          Warum braucht man Container-Orchestrierung?
+                          <ul>
+                            <li>Vielzahl an Containern verwalten: Wenn du viele Container (kleine, unabhängige Programme) laufen hast, wird es schwierig, jeden einzelnen manuell zu starten, zu stoppen oder zu überwachen.</li>
+                            <li>Automatische Verwaltung: Orchestrierungstools übernehmen automatisch Aufgaben wie das Starten neuer Container, das Ersetzen von fehlerhaften Containern und das Verteilen der Last auf verschiedene Rechner.</li>
+                            <li>Skalierbarkeit und Zuverlässigkeit: Sie helfen dabei, dass deine Anwendung auch bei hoher Last stabil und zuverlässig läuft, indem sie schnell auf Änderungen reagieren.</li>
+                          </ul>
+                        </li>
+                        <li>
+                          Wie funktioniert Container-Orchestrierung?
+                          <ul>
+                            <li>Überwachung: Das Orchestrierungstool beobachtet ständig den Zustand aller Container.</li>
+                            <li>Automatisches Starten und Stoppen: Es startet neue Container, wenn mehr Leistung gebraucht wird, und stoppt sie, wenn sie nicht mehr nötig sind.</li>
+                            <li>Fehlerbehebung: Wenn ein Container ausfällt, sorgt das System dafür, dass er ersetzt oder neu gestartet wird.</li>
+                            <li>Verteilung: Container werden intelligent auf verschiedene Rechner (Hosts) verteilt, um Ressourcen optimal zu nutzen.</li>
+                            <li>Updates und Änderungen: Es ermöglicht auch das einfache Aktualisieren oder Ändern der Anwendung, ohne dass die ganze Anwendung stillgelegt werden muss.</li>
+                          </ul>
+                          <li>
+                            Welche Container-Orchestrierung Technologien kennen Sie?
+                            <ul>
+                              <li>Kubernetes: Das am weitesten verbreitete Open-Source-System für Container-Orchestrierung.</li>
+                            </ul>
+                          </li>
+
+                          <li>
+                            Was versteht man unter "Scaling Containers"?
+                            <ul>
+                              <li>Scaling (Skalieren): Das bedeutet, die Anzahl der Container anzupassen, je nachdem, wie hoch die Nachfrage ist.</li>
+                              <li>Horizontal Scaling: Mehr Container werden hinzugefügt, um mehr Anfragen zu verarbeiten (wie mehr Mitarbeiter einstellen, wenn viel los ist).</li>
+                              <li>Vertical Scaling: Die Ressourcen eines einzelnen Containers werden erweitert (z. B. mehr Speicher oder CPU-Leistung), was aber oft weniger flexibel ist.</li>
+                              <li>Einfach gesagt: Wenn deine Anwendung plötzlich sehr beliebt wird, sorgt das System dafür, dass mehr Container gestartet werden oder die Leistung sich erhöht, damit alle Nutzer schnell bedient werden können.</li>
+                            </ul>
+                          </li>
+
+                          <li>
+                            Was gibt es für Deployment Strategien?
+                            <ul>
+                              <li>Rolling Update:
+                                <ul>
+                                  <li>Container werden nacheinander aktualisiert.</li>
+                                  <li>Immer laufen einige alte Versionen, während neue nach und nach gestartet werden.</li>
+                                </ul>
+                              </li>
+                              <li>Blue-Green Deployment:
+                                <ul>
+                                  <li>Es gibt zwei identische Umgebungen (z. B. „blue“ und „green“).</li>
+                                  <li>Die neue Version wird in der „green“-Umgebung gestartet.</li>
+                                  <li>Sobald alles getestet ist, wird der gesamte Traffic von „blue“ auf „green“ umgeleitet.</li>
+                                </ul>
+                              </li>
+                              <li>Canary Deployment:
+                                <ul>
+                                  <li>Die neue Version wird zuerst nur an einen kleinen Teil der Nutzer ausgerollt.</li>
+                                  <li>Wenn alles gut funktioniert, wird sie schrittweise für alle freigeschaltet.</li>
+                                </ul>
+                              </li>
+                              <li>Recreate Deployment:
+                                <ul>
+                                  <li>Alle alten Container werden gleichzeitig gestoppt und durch die neuen ersetzt.</li>
+                                  <li>Diese Methode kann zu kurzen Ausfallzeiten führen und wird meist nur bei weniger kritischen Anwendungen eingesetzt.</li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </li>
                     </li>
                 </li>
             </ul>
