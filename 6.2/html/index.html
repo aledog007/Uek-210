@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>Lecaj, Fano, Leonhardt</header>
+    
+    <h1>Cloud Vorwissen</h1>
+
+    <ul>
+      <li>AWS</li>
+      <li>EC2-Instanzen</li>
+      <li>S3-Buckets</li>
+      <li>VPC</li>
+      <li>Subnetze</li>
+      <li>Azure</li>
+      <li>Load Balancer</li>
+      <li>Backup</li>
+      <li>IAAS</li>
+      <li>SAAS</li>
+      <li>PAAS</li>
+      <li>FAAS</li>
+      <li>BAAS</li>
+      <li>Port Forwarding</li>
+      <li>cloud-init</li>
+      <li>IAM</li>
+      <li>Terraform</li>
+      <li>Linux/GNU</li>
+      <li>Skalierung (Horizontal/Vertikal)</li>
+      <li>Container</li>
+      <li>Container Images</li>
+      <li>Hypervisor Typ 1 & Typ 2</li>
+    </ul>
+
+    <img src="bild.png" />
+
+    <h1>Aufgabe 1.2 Grundlagen Cloud-Computing</h1>
+
+    <ul>
+      <li>Wie ist der Begriff Cloud entstanden? Wieso heisst es Cloud?</li>
+      <br />
+      <ul>
+        <li>
+          Stammt aus Netzwerkdiagrammen, wo das Internet als
+          <b>Wolke</b> dargestellt wurde.
+        </li>
+        <li>Steht für <b>virtuelle, abstrakte IT-Infrastruktur.</b></li>
+      </ul>
+
+      <br />
+      <li>
+        Wie wird der Begriff Cloud definiert, z.B. gemäss NIST?
+        <br />
+        <p>
+          Cloud Computing ist ein Modell für den allgegenwärtigen, bequemen und
+          bedarfsgerechten Netzzugang zu einem
+          <b
+            >gemeinsam genutzten Pool konfigurierbarer Computerressourcen (z. B.
+            Netzwerke, Server, Speicher, Anwendungen und Dienste)</b
+          >, die schnell und mit minimalem Verwaltungsaufwand oder Interaktion
+          mit dem Dienstanbieter bereitgestellt und freigegeben werden können.
+          Dieses Cloud-Modell besteht aus fünf wesentlichen Merkmalen, drei
+          Dienstmodellen und vier Bereitstellungsmodellen Modellen.
+        </p>
+        <br />
+      </li>
+
+      <li>
+        Welche Cloud Dienstleistungen kennen Sie?
+        <br />
+        <ul>
+          <li>Speicher (Dropbox, Google Drive).</li>
+          <li>Rechenleistung (AWS EC2, Azure VM).</li>
+          <li>Datenbanken (AWS RDS, Google Cloud SQL).</li>
+          <li>KI-Services (Google AI, AWS SageMaker).</li>
+          <li>SaaS (Microsoft 365, Salesforce).</li>
+        </ul>
+
+        <br />
+      </li>
+
+      <li>
+        Welche Cloud Anbieter kennen Sie?
+        <br />
+        <ul>
+          <li>Grosse Anbieter: AWS, Microsoft Azure, Google Cloud.</li>
+          <li>Weitere: IBM Cloud, Oracle Cloud, Alibaba Cloud.</li>
+        </ul>
+
+        <br />
+      </li>
+
+      <li>
+        Welche Cloud Deployment Modelle kennen Sie?
+        <br />
+        <ul>
+          <li>
+            Public Cloud: Wird von Dritten betrieben und für viele Kunden
+            öffentlich bereitgestellt (z. B. AWS, Google Cloud).
+          </li>
+          <li>
+            Private Cloud: Eine Cloud-Umgebung, die exklusiv für eine
+            Organisation betrieben wird, entweder On-Premise oder bei einem
+            Anbieter.
+          </li>
+          <li>
+            Hybrid Cloud: Kombination aus Public und Private Cloud, um
+            Flexibilität und Sicherheit zu bieten.
+          </li>
+          <li>
+            Community Cloud: Eine spezielle Cloud für eine bestimmte Branche
+            oder Organisationen mit ähnlichen Anforderungen.
+          </li>
+        </ul>
+
+        <br />
+      </li>
+
+      <li>
+        Was sind Cloud Service Modelle?
+        <br />
+        <ul>
+          <li>
+            Infrastructure as a Service (IaaS): Bereitstellung von
+            Hardware-Ressourcen (Server, Speicher, Netzwerk). Beispiel: AWS EC2,
+            Google Compute Engine.
+          </li>
+          <li>
+            Platform as a Service (PaaS): Entwicklungs- und Laufzeitumgebungen
+            für Anwendungen. Beispiel: Google App Engine, Microsoft Azure App
+            Services.
+          </li>
+          <li>
+            Software as a Service (SaaS): Vollständig gehostete Anwendungen, die
+            direkt genutzt werden können. Beispiel: Gmail, Salesforce, Microsoft
+            365.
+          </li>
+        </ul>
+
+        <br />
+      </li>
+
+      <li>
+        Weshalb soll ich Dienste aus der Cloud beziehen? Was sind die Vorteile?
+        <br />
+        <b>Vorteile der Cloud</b>
+        <ul>
+          <li>Kosteneffizient (weniger Hardware).</li>
+          <li>Skalierbar (flexible Anpassung).</li>
+          <li>Überall zugänglich (Internetverbindung).</li>
+          <li>Automatische Updates & Sicherheit.</li>
+        </ul>
+
+        <br />
+      </li>
+
+      <li>
+        Was sind die Nachteile?
+        <br />
+        <ul>
+          <li>Abhängigkeit vom Anbieter (Lock-in).</li>
+          <li>Datenschutz & Compliance-Herausforderungen.</li>
+          <li>Internetabhängigkeit (kein Netz, kein Zugriff).</li>
+          <li>Laufende Kosten durch Abo-Modelle.</li>
+        </ul>
+
+        <br />
+      </li>
+
+      <li>
+        Welche Dienstleistungen werden in Ihrem Betrieb On-Premise (eigenes
+        Rechenzentrum) betrieben?
+        <br />
+        <ul>
+          <li>Kritische Geschäftsanwendungen (ERP, Finanzsysteme).</li>
+          <li>Legacy-Systeme.</li>
+          <li>Interne Datenbanken mit hohen Sicherheitsanforderungen.</li>
+        </ul>
+
+        <br />
+      </li>
+
+      <li>
+        Wie werden technologische Beiträge in der Cloud geteilt bzw. zur
+        Verfügung gestellt?
+        <br />
+        <ul>
+          <li>APIs (Schnittstellen für externe Anwendungen).</li>
+          <li>Container & Microservices (Docker, Kubernetes).</li>
+          <li>Repositories & Versionierung (GitHub, GitLab).</li>
+          <li>CDN (Cloudflare, AWS CloudFront für schnelle Bereitstellung).</li>
+          <li>Serverless Computing (AWS Lambda, Azure Functions).</li>
+        </ul>
+
+        <br />
+      </li>
+
+      <li>
+        Welches sind die 5 Merkmale einer Cloud?
+        <br />
+        <ul>
+          <li>On-Demand Self-Service (automatische Bereitstellung).</li>
+          <li>
+            Breiter Netzwerkzugriff (überall erreichbar, es soll schnell für den
+            user sein (Fetter Internet Zugang)).
+          </li>
+          <li>
+            Ressourcen-Pooling (geteilte Infrastruktur, Haufen Server
+            zusammensetzen).
+          </li>
+          <li>
+            Schnelle Elastizität (flexible Skalierung sei es horizontal oder
+            Vertikal).
+          </li>
+          <li>
+            Messbarer Dienst (verbrauchsbasierte Abrechnung, Nutzung wird
+            gemessen und wird geholt was gebraucht werden z.B Datenbank wenn ich
+            sie nur brauche).
+          </li>
+
+          <h1>Grundlagen Container-Technologie</h1>
+        <li>
+            Was ist Container-Technologie oder Container-Virtualisierung?
+            <ul>
+                <li>
+                    Container-Technologie oder Container-Virtualisierung ist eine Methode, um Software-Anwendungen und deren Abhängigkeiten so zu verpacken, dass sie überall gleich laufen – egal, ob auf einem Laptop, Server oder in der Cloud.
+                </li>
+                <li>
+                    Stell dir einen Container wie eine kleine, abgeschottete Box vor, in der alles drin ist, was eine Anwendung zum Laufen braucht: der Code, Bibliotheken und Einstellungen. Dadurch kann sie unabhängig vom Betriebssystem und der Umgebung ausgeführt werden.
+                </li>
+                <li>
+                    Das ist ähnlich wie bei einem Schiffscontainer: Egal, was darin transportiert wird, der Container passt überall – auf ein Schiff, einen Zug oder einen LKW. Genauso funktionieren Software-Container auf verschiedenen Systemen, ohne dass Anpassungen nötig sind.
+                </li>
+                <li>
+                    Ein bekanntes Beispiel für eine Container-Technologie ist Docker.
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            Was sind die Vor- und Nachteile der Container-Technologie zu virtuellen Servern (VM)?
+            <ul>
+                <li>
+                    <b>Kriterium</b>
+                    <ul>
+                        <li>Container</li>
+                        <li>Virtuelle Maschinen (VMs)</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Ressourcenverbrauch</b>
+                    <ul>
+                        <li>Geringer, da Container sich den Kernel teilen</li>
+                        <li>Höher, da jede VM ein eigenes OS benötigt</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Startzeit</b>
+                    <ul>
+                        <li>Sehr schnell (Sekunden)</li>
+                        <li>Langsam (Minuten), da komplettes OS geladen wird</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Portabilität</b>
+                    <ul>
+                        <li>Sehr hoch, da sie überall laufen, wo eine Container-Laufzeitumgebung vorhanden ist</li>
+                        <li>Eingeschränkt, da das gesamte OS migriert werden muss</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Isolation</b>
+                    <ul>
+                        <li>Gut, aber nicht so stark wie bei VMs</li>
+                        <li>Sehr stark, da jede VM ihr eigenes OS hat</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Sicherheit</b>
+                    <ul>
+                        <li>Potenziell anfälliger, da alle Container denselben Kernel teilen</li>
+                        <li>Höher, da jede VM ein isoliertes OS nutzt</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Flexibilität</b>
+                    <ul>
+                        <li>Hohe Skalierbarkeit und einfache Bereitstellung</li>
+                        <li>Weniger flexibel, aber gut für traditionelle Anwendungen geeignet</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Fazit:</b> Container sind ideal für Microservices-Architekturen und Cloud-native Anwendungen, während VMs besser für isolierte, monolithische oder ältere Anwendungen geeignet sind.
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            Welche Produkte kennen Sie im Zusammenhang mit virtuellen Servern und Container?
+            <ul>
+                <li>
+                    <b>Virtuelle Maschinen (VMs):</b>
+                    <ul>
+                        <li>VMware vSphere</li>
+                        <li>Microsoft Hyper-V</li>
+                        <li>KVM (Kernel-based Virtual Machine)</li>
+                        <li>VirtualBox</li>
+                        <li>Citrix XenServer</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Container-Technologie:</b>
+                    <ul>
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                        <li>Podman</li>
+                        <li>OpenShift</li>
+                        <li>LXC (Linux Containers)</li>
+                    </ul>
+                    <li>
+                        <b>Unterschiede zwischen VM und Container:</b>
+                        <ul>
+                            <li>
+                                <b>Bereitstellung:</b>
+                                <ul>
+                                    <li>Virtuelle Maschinen (VMs): Langsame Bereitstellung (Minuten)</li>
+                                    <li>Container: Schnelle Bereitstellung (Sekunden)</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Speicherplatz:</b>
+                                <ul>
+                                    <li>Virtuelle Maschinen (VMs): Größer, da jedes OS eigenständig läuft</li>
+                                    <li>Container: Kleiner, da Container sich das OS teilen</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Portabilität:</b>
+                                <ul>
+                                    <li>Virtuelle Maschinen (VMs): Weniger portabel, erfordert Migration ganzer VMs</li>
+                                    <li>Container: Sehr portabel, da nur der Container benötigt wird</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Effizienz:</b>
+                                <ul>
+                                    <li>Virtuelle Maschinen (VMs): Mehr Overhead durch OS-Instanzen</li>
+                                    <li>Container: Weniger Overhead, da nur Anwendungen virtualisiert werden</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Betriebssystem (Kernel):</b>
+                                <ul>
+                                    <li>Virtuelle Maschinen (VMs): Jede VM hat ein eigenes OS</li>
+                                    <li>Container: Alle Container teilen denselben Kernel</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Können virtuelle Server immer durch Container ersetzt werden?</b>
+                        <p>
+                            Container können virtuelle Maschinen (VMs) nicht immer ersetzen. Sie sind ideal für moderne, verteilte Anwendungen, die aus kleinen, unabhängigen Microservices bestehen. Container teilen sich das Betriebssystem des Hosts, was sie leicht und effizient macht. VMs hingegen bieten eine vollständige Isolation, da jede VM ihr eigenes Betriebssystem hat. Das ist wichtig für sichere oder monolithische Anwendungen, die schwer in kleine Container aufteilbar sind. Wenn eine Anwendung verschiedene Betriebssysteme benötigt, ist eine VM besser geeignet. Container starten schneller und verbrauchen weniger Ressourcen, während VMs mehr Speicher und Leistung brauchen. Für einfache Web-Apps oder Microservices sind Container perfekt. Für traditionelle, große Anwendungen oder hohe Sicherheitsanforderungen sind VMs oft die bessere Wahl. Ob Container oder VM – es kommt immer auf den Einsatzzweck an.
+                        </p>
+                    </li>
+                    <li>
+                        <b>Unterschied zwischen Self-Managed und Fully Managed:</b>
+                        <ul>
+                            <li>
+                                <b>Verwaltung:</b>
+                                <ul>
+                                    <li>Self-Managed: Unternehmen verwalten Infrastruktur selbst</li>
+                                    <li>Fully Managed: Cloud-Anbieter übernimmt Verwaltung</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Flexibilität:</b>
+                                <ul>
+                                    <li>Self-Managed: Hohe Anpassungsmöglichkeiten</li>
+                                    <li>Fully Managed: Eingeschränkte Anpassung</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Wartung:</b>
+                                <ul>
+                                    <li>Self-Managed: Eigenverantwortlich für Updates, Sicherheit & Skalierung</li>
+                                    <li>Fully Managed: Automatische Updates & Wartung durch Anbieter</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Kosten:</b>
+                                <ul>
+                                    <li>Self-Managed: Meist günstiger, aber hoher administrativer Aufwand</li>
+                                    <li>Fully Managed: Teurer, aber einfacher zu betreiben</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Beispiele:</b>
+                                <ul>
+                                    <li>Self-Managed: Eigenbetriebene Kubernetes-Cluster</li>
+                                    <li>Fully Managed: AWS Fargate, Google Kubernetes Engine (GKE), Azure Kubernetes Service (AKS)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p>
+                            <b>Fazit:</b> Self-Managed ist gut für Unternehmen, die volle Kontrolle und Flexibilität benötigen. Fully Managed eignet sich für Firmen, die sich auf ihre Anwendungen konzentrieren wollen und weniger administrativen Aufwand wünschen.
+                        </p>
+                        <h1>Aufgabe 4.1</h1>
+                        <li>
+                          Warum braucht man Container-Orchestrierung?
+                          <ul>
+                            <li>Vielzahl an Containern verwalten: Wenn du viele Container (kleine, unabhängige Programme) laufen hast, wird es schwierig, jeden einzelnen manuell zu starten, zu stoppen oder zu überwachen.</li>
+                            <li>Automatische Verwaltung: Orchestrierungstools übernehmen automatisch Aufgaben wie das Starten neuer Container, das Ersetzen von fehlerhaften Containern und das Verteilen der Last auf verschiedene Rechner.</li>
+                            <li>Skalierbarkeit und Zuverlässigkeit: Sie helfen dabei, dass deine Anwendung auch bei hoher Last stabil und zuverlässig läuft, indem sie schnell auf Änderungen reagieren.</li>
+                          </ul>
+                        </li>
+                        <li>
+                          Wie funktioniert Container-Orchestrierung?
+                          <ul>
+                            <li>Überwachung: Das Orchestrierungstool beobachtet ständig den Zustand aller Container.</li>
+                            <li>Automatisches Starten und Stoppen: Es startet neue Container, wenn mehr Leistung gebraucht wird, und stoppt sie, wenn sie nicht mehr nötig sind.</li>
+                            <li>Fehlerbehebung: Wenn ein Container ausfällt, sorgt das System dafür, dass er ersetzt oder neu gestartet wird.</li>
+                            <li>Verteilung: Container werden intelligent auf verschiedene Rechner (Hosts) verteilt, um Ressourcen optimal zu nutzen.</li>
+                            <li>Updates und Änderungen: Es ermöglicht auch das einfache Aktualisieren oder Ändern der Anwendung, ohne dass die ganze Anwendung stillgelegt werden muss.</li>
+                          </ul>
+                          <li>
+                            Welche Container-Orchestrierung Technologien kennen Sie?
+                            <ul>
+                              <li>Kubernetes: Das am weitesten verbreitete Open-Source-System für Container-Orchestrierung.</li>
+                            </ul>
+                          </li>
+
+                          <li>
+                            Was versteht man unter "Scaling Containers"?
+                            <ul>
+                              <li>Scaling (Skalieren): Das bedeutet, die Anzahl der Container anzupassen, je nachdem, wie hoch die Nachfrage ist.</li>
+                              <li>Horizontal Scaling: Mehr Container werden hinzugefügt, um mehr Anfragen zu verarbeiten (wie mehr Mitarbeiter einstellen, wenn viel los ist).</li>
+                              <li>Vertical Scaling: Die Ressourcen eines einzelnen Containers werden erweitert (z. B. mehr Speicher oder CPU-Leistung), was aber oft weniger flexibel ist.</li>
+                              <li>Einfach gesagt: Wenn deine Anwendung plötzlich sehr beliebt wird, sorgt das System dafür, dass mehr Container gestartet werden oder die Leistung sich erhöht, damit alle Nutzer schnell bedient werden können.</li>
+                            </ul>
+                          </li>
+
+                          <li>
+                            Was gibt es für Deployment Strategien?
+                            <ul>
+                              <li>Rolling Update:
+                                <ul>
+                                  <li>Container werden nacheinander aktualisiert.</li>
+                                  <li>Immer laufen einige alte Versionen, während neue nach und nach gestartet werden.</li>
+                                </ul>
+                              </li>
+                              <li>Blue-Green Deployment:
+                                <ul>
+                                  <li>Es gibt zwei identische Umgebungen (z. B. „blue“ und „green“).</li>
+                                  <li>Die neue Version wird in der „green“-Umgebung gestartet.</li>
+                                  <li>Sobald alles getestet ist, wird der gesamte Traffic von „blue“ auf „green“ umgeleitet.</li>
+                                </ul>
+                              </li>
+                              <li>Canary Deployment:
+                                <ul>
+                                  <li>Die neue Version wird zuerst nur an einen kleinen Teil der Nutzer ausgerollt.</li>
+                                  <li>Wenn alles gut funktioniert, wird sie schrittweise für alle freigeschaltet.</li>
+                                </ul>
+                              </li>
+                              <li>Recreate Deployment:
+                                <ul>
+                                  <li>Alle alten Container werden gleichzeitig gestoppt und durch die neuen ersetzt.</li>
+                                  <li>Diese Methode kann zu kurzen Ausfallzeiten führen und wird meist nur bei weniger kritischen Anwendungen eingesetzt.</li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </li>
+                    </li>
+                </li>
+            </ul>
+        </li>
+        </ul>
+        <br />
+      </li>
+    </ul>
+  </body>
+</html>
