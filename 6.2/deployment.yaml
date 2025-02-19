@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: html-openshift-app
-        image: ghcr.io/fussballerefz/html-openshift-app:latest
+        image: ghcr.io/fussballerefz/html-openshift-app:v1
         imagePullPolicy: Always
         ports:
         - containerPort: 80
@@ -35,7 +35,7 @@ spec:
   ports:
     - name: http
       protocol: TCP
-      port: 80
+      port: 8080
       targetPort: 8080
   type: ClusterIP
   selector:
