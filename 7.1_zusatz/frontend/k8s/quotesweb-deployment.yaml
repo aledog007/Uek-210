@@ -1,0 +1,25 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: fronten-pod
+  labels:
+    app: fronten-pod
+    sandbox: learn-kubernetes
+    learn-kubernetes: fronten-pod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fronten-pod
+  template:
+    metadata:
+      labels:
+        app: fronten-pod
+    spec:
+      containers:
+        - name: fronten-pod
+          image: quay.io/donschenck/quotesweb:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+              protocol: TCP

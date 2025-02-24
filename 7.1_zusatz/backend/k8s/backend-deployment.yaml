@@ -1,0 +1,28 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: backen-pod
+  labels:
+    app: backen-pod
+    sandbox: learn-kubernetes
+    learn-kubernetes: backen-pod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backen-pod
+  template:
+    metadata:
+      labels:
+        app: backen-pod
+    spec:
+      containers:
+        - name: backen-pod
+          image: quay.io/donschenck/quotes:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 10000
+              protocol: TCP
+          env:
+            - name: DB_SERVICE_NAME
+              value: db-service
