@@ -27,5 +27,5 @@ spec:
             - name: DB_SERVICE_NAME
               valueFrom:
                 configMapKeyRef:
-                  name: backend-config
+                  name: backen-config
                   key: DB_SERVICE_NAME
