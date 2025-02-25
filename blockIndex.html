@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Umfassender Überblick: Cloud- und Container-Technologien</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #f4f7f8;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    section {
+      margin-bottom: 50px;
+    }
+    .question {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .answer {
+      margin-left: 20px;
+      margin-top: 5px;
+    }
+    ul, ol {
+      margin-left: 40px;
+    }
+    .example {
+      background: #e8f4fd;
+      border-left: 4px solid #3498db;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      margin-top: 20px;
+    }
+    /* Zusätzliche Klasse für Bilder */
+    .image-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      padding: 5px;
+      background: #fafafa;
+      margin-bottom: 10px;
+      border-radius: 4px;
+    }
+    .image-caption {
+      font-size: 0.9em;
+      color: #555;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Umfassender Überblick: Cloud- und Container-Technologien</h1>
+    
+    <!-- Block 1 -->
+    <section id="block1">
+      <h2>Block 1: Grundlagen der Cloud</h2>
+      
+      <div class="question">
+        Wie ist der Begriff Cloud entstanden? Wieso heisst es Cloud?
+      </div>
+      <div class="answer">
+        Der Begriff "Cloud" hat seinen Ursprung in der Netzwerktechnik. In frühen Netzwerkdiagrammen wurde oft eine stilisierte Wolke gezeichnet, um die komplexe und undurchsichtige Infrastruktur des Internets zu repräsentieren. Dieses Symbol stand dafür, dass die dahinterliegenden Details – wie Serverstandorte oder -konfigurationen – für den Endnutzer irrelevant sind. So symbolisiert die „Cloud“ heute die Abstraktion und den verteilten Charakter moderner IT-Infrastrukturen.
+        <div class="example">
+          Beispiel: In Architekturdiagrammen wird häufig einfach ein Wolkensymbol verwendet, um zu verdeutlichen, dass Daten oder Anwendungen in einer globalen, virtuellen Umgebung gehostet werden.
+        </div>
+      </div>
+      
+      <div class="question">
+        Wie wird der Begriff Cloud definiert, z.B. gemäss NIST?
+      </div>
+      <div class="answer">
+        Nach der Definition des National Institute of Standards and Technology (NIST) bezeichnet Cloud Computing ein Modell, das bedarfsgesteuerten Netzwerkzugriff auf einen gemeinsamen Pool konfigurierbarer Rechnerressourcen ermöglicht. Diese Ressourcen – wie Netzwerke, Server, Speicher, Anwendungen und Dienste – werden schnell bereitgestellt und freigegeben, oft nach dem Pay-as-you-go-Prinzip.
+      </div>
+      
+      <div class="question">
+        Welches sind die 5 Merkmale einer Cloud?
+      </div>
+      <div class="answer">
+        Die fünf wesentlichen Merkmale laut NIST sind:
+        <ol>
+          <li><strong>On-Demand Self-Service:</strong> Nutzer können Ressourcen wie Rechenleistung oder Speicherplatz automatisch nach Bedarf provisionieren.</li>
+          <li><strong>Broad Network Access:</strong> Dienste sind über standardisierte Netzwerkschnittstellen (z.B. Internet) zugänglich.</li>
+          <li><strong>Resource Pooling:</strong> Die Ressourcen werden in einem gemeinsamen Pool gebündelt und dynamisch mehreren Kunden zugewiesen.</li>
+          <li><strong>Rapid Elasticity:</strong> Ressourcen können schnell und flexibel hoch- oder heruntergefahren werden.</li>
+          <li><strong>Measured Service:</strong> Die Nutzung wird überwacht, gemessen und entsprechend abgerechnet (Pay-per-Use).</li>
+        </ol>
+      </div>
+      
+      <div class="question">
+        Welche Cloud Dienstleistungen kennen Sie?
+      </div>
+      <div class="answer">
+        Cloud-Dienstleistungen umfassen unter anderem:
+        <ul>
+          <li><strong>Infrastructure as a Service (IaaS):</strong> Bereitstellung von IT-Infrastruktur wie virtuelle Maschinen, Speicher und Netzwerke (z. B. AWS EC2, Azure Virtual Machines).</li>
+          <li><strong>Platform as a Service (PaaS):</strong> Entwicklungs- und Laufzeitumgebungen für Anwendungen (z. B. Google App Engine, Azure App Service).</li>
+          <li><strong>Software as a Service (SaaS):</strong> Fertige Softwareanwendungen, die über das Internet angeboten werden (z. B. Office 365, Salesforce).</li>
+          <li><strong>Function as a Service (FaaS):</strong> Ausführung einzelner Funktionen in einer serverlosen Umgebung (z. B. AWS Lambda, Azure Functions).</li>
+        </ul>
+      </div>
+      
+      <div class="question">
+        Welche Cloud Anbieter kennen Sie?
+      </div>
+      <div class="answer">
+        Bekannte Cloud-Anbieter sind unter anderem:
+        <ul>
+          <li>Amazon Web Services (AWS)</li>
+          <li>Microsoft Azure</li>
+          <li>Google Cloud Platform (GCP)</li>
+          <li>IBM Cloud</li>
+          <li>Oracle Cloud</li>
+          <li>Alibaba Cloud</li>
+        </ul>
+      </div>
+      
+      <div class="question">
+        Welche Cloud Deployment Modelle kennen Sie?
+      </div>
+      <div class="answer">
+        Gängige Cloud-Deployment-Modelle umfassen:
+        <ul>
+          <li><strong>Public Cloud:</strong> Dienste, die öffentlich über das Internet zugänglich sind.</li>
+          <li><strong>Private Cloud:</strong> Exklusive Cloud-Umgebungen, die von einem einzelnen Unternehmen betrieben werden.</li>
+          <li><strong>Hybrid Cloud:</strong> Kombination aus Public und Private Cloud, um das Beste aus beiden Welten zu nutzen.</li>
+          <li><strong>Community Cloud:</strong> Gemeinsame Infrastruktur, die von mehreren Organisationen mit ähnlichen Anforderungen geteilt wird.</li>
+          <li><strong>Multi-Cloud:</strong> Nutzung von Diensten mehrerer Cloud-Anbieter.</li>
+        </ul>
+      </div>
+      
+      <div class="question">
+        Was sind Cloud Service Modelle?
+      </div>
+      <div class="answer">
+        Cloud Service Modelle definieren, wie Cloud-Dienste bereitgestellt werden. Die drei primären Modelle sind:
+        <ul>
+          <li><strong>IaaS (Infrastructure as a Service):</strong> Bereitstellung von grundlegenden IT-Ressourcen.</li>
+          <li><strong>PaaS (Platform as a Service):</strong> Bereitstellung von Entwicklungsplattformen und -tools.</li>
+          <li><strong>SaaS (Software as a Service):</strong> Bereitstellung von kompletten Softwarelösungen über das Internet.</li>
+        </ul>
+      </div>
+      
+      <div class="question">
+        Weshalb soll ich Dienste aus der Cloud beziehen? Was sind die Vorteile?
+      </div>
+      <div class="answer">
+        Die Nutzung von Cloud-Diensten bietet zahlreiche Vorteile:
+        <ul>
+          <li><strong>Kosteneffizienz:</strong> Reduzierte Investitionskosten durch nutzungsabhängige Bezahlung.</li>
+          <li><strong>Flexibilität und Skalierbarkeit:</strong> Ressourcen können bei Bedarf schnell erweitert oder reduziert werden.</li>
+          <li><strong>Zugänglichkeit:</strong> Dienste sind ortsunabhängig über das Internet erreichbar.</li>
+          <li><strong>Wartungsarm:</strong> Der Anbieter übernimmt Wartung, Updates und Sicherheitsmanagement.</li>
+          <li><strong>Innovationsgeschwindigkeit:</strong> Schneller Zugang zu modernen Technologien und Tools.</li>
+        </ul>
+      </div>
+      
+      <div class="question">
+        Was sind die Nachteile?
+      </div>
+      <div class="answer">
+        Trotz der vielen Vorteile gibt es auch einige Nachteile:
+        <ul>
+          <li><strong>Sicherheitsbedenken:</strong> Datenschutz und Datensicherheit können problematisch sein, vor allem in Public Clouds.</li>
+          <li><strong>Abhängigkeit:</strong> Möglicher Vendor Lock-in, bei dem ein Wechsel des Anbieters schwierig wird.</li>
+          <li><strong>Internetabhängigkeit:</strong> Ohne stabile Internetverbindung sind die Dienste nicht erreichbar.</li>
+          <li><strong>Compliance-Probleme:</strong> Regulatorische Anforderungen und Datenhoheit können Herausforderungen darstellen.</li>
+        </ul>
+      </div>
+      
+      <div class="question">
+        Welche Dienstleistungen werden in Ihrem Betrieb On-Premise (eigenes Rechenzentrum) betrieben?
+      </div>
+      <div class="answer">
+        Viele Unternehmen betreiben kritische oder ältere Systeme weiterhin On-Premise, wie etwa:
+        <ul>
+          <li>Interne Datenbanken und ERP-Systeme</li>
+          <li>Eigene E-Mail- und Kommunikationsserver</li>
+          <li>Datei- und Backup-Server</li>
+          <li>Spezialisierte Anwendungen mit hohen Sicherheitsanforderungen</li>
+        </ul>
+        <div class="example">
+          Beispiel: Ein Finanzunternehmen verarbeitet sensible Kundendaten in einem eigenen Rechenzentrum, um maximale Kontrolle über Sicherheitsmaßnahmen zu gewährleisten.
+        </div>
+      </div>
+      
+      <div class="question">
+        Wie werden technologische Beiträge in der Cloud geteilt bzw. zur Verfügung gestellt?
+      </div>
+      <div class="answer">
+        Technologische Beiträge werden in der Cloud über verschiedene Mechanismen geteilt:
+        <ul>
+          <li><strong>APIs und Webservices:</strong> Ermöglichen den Datenaustausch zwischen Anwendungen.</li>
+          <li><strong>Open Source Projekte:</strong> Viele Cloud-Technologien (z.B. Kubernetes, Docker) werden als Open Source entwickelt und geteilt.</li>
+          <li><strong>Marktplätze und App-Stores:</strong> Anbieter veröffentlichen ihre Services in speziellen Marktplätzen, in denen Nutzer Lösungen finden und abonnieren können.</li>
+          <li><strong>Container-Repositories:</strong> Plattformen wie Docker Hub oder GitHub Container Registry ermöglichen das Teilen von containerisierten Anwendungen.</li>
+        </ul>
+      </div>
+    </section>
+    
+    <!-- Block 2 -->
+    <section id="block2">
+      <h2>Block 2: Vergleich führender Cloud-Anbieter</h2>
+      
+      <div class="question">
+        Wählen Sie mindestens drei der führenden Cloud-Anbieter aus (z. B. AWS, Azure, Google Cloud).
+      </div>
+      <div class="answer">
+        Für diesen Vergleich wählen wir folgende drei Anbieter:
+        <ul>
+          <li><strong>Amazon Web Services (AWS)</strong></li>
+          <li><strong>Microsoft Azure</strong></li>
+          <li><strong>Google Cloud Platform (GCP)</strong></li>
+        </ul>
+      </div>
+      
+      <div class="question">
+        Stellen Sie die wichtigsten Dienstleistungen der ausgewählten Anbieter vor (z. B. Speicherlösungen, Datenbanken, AI/ML-Services, Netzwerkdienste).
+      </div>
+      <div class="answer">
+        <strong>Amazon Web Services (AWS):</strong>
+        <ul>
+          <li><strong>Speicherlösungen:</strong> Amazon S3 (Objektspeicherung) und EBS (Blockspeicher)</li>
+          <li><strong>Datenbanken:</strong> Amazon RDS, DynamoDB</li>
+          <li><strong>AI/ML-Services:</strong> Amazon SageMaker, Rekognition</li>
+          <li><strong>Netzwerkdienste:</strong> Amazon VPC, CloudFront</li>
+        </ul>
+        <strong>Microsoft Azure:</strong>
+        <ul>
+          <li><strong>Speicherlösungen:</strong> Azure Blob Storage, Azure Files</li>
+          <li><strong>Datenbanken:</strong> Azure SQL Database, Cosmos DB</li>
+          <li><strong>AI/ML-Services:</strong> Azure Machine Learning, Cognitive Services</li>
+          <li><strong>Netzwerkdienste:</strong> Azure Virtual Network, ExpressRoute</li>
+        </ul>
+        <strong>Google Cloud Platform (GCP):</strong>
+        <ul>
+          <li><strong>Speicherlösungen:</strong> Google Cloud Storage, Persistent Disks</li>
+          <li><strong>Datenbanken:</strong> Cloud SQL, Firestore, Bigtable</li>
+          <li><strong>AI/ML-Services:</strong> AI Platform, AutoML</li>
+          <li><strong>Netzwerkdienste:</strong> Virtual Private Cloud (VPC), Cloud Load Balancing</li>
+        </ul>
+      </div>
+      
+      <div class="question">
+        Vergleichen Sie relevante Kriterien: Kostenstruktur, Skalierbarkeit, Sicherheit, Verfügbarkeit und Zuverlässigkeit, Kundensupport.
+      </div>
+      <div class="answer">
+        <ul>
+          <li><strong>Kostenstruktur:</strong> Alle Anbieter nutzen ein Pay-as-you-go-Modell. AWS bietet vielfältige Preismodelle, Azure profitiert von bestehenden Microsoft-Lizenzstrukturen, und GCP punktet häufig mit wettbewerbsfähigen Preisen.</li>
+          <li><strong>Skalierbarkeit:</strong> Dank Auto-Scaling und globaler Infrastruktur lassen sich Ressourcen flexibel anpassen. AWS und Azure haben umfangreiche automatische Skalierungsoptionen, während GCP dynamische Anpassungen unterstützt.</li>
+          <li><strong>Sicherheit:</strong> Alle Anbieter bieten umfassende Sicherheitsfeatures und Zertifizierungen (z.B. ISO, SOC). Unterschiede zeigen sich in spezifischen Sicherheitsdiensten und Compliance-Optionen.</li>
+          <li><strong>Verfügbarkeit und Zuverlässigkeit:</strong> Globale Rechenzentrumsnetzwerke und klare SLAs garantieren hohe Verfügbarkeiten. Multi-Region-Deployments sorgen für Redundanz.</li>
+          <li><strong>Kundensupport:</strong> AWS, Azure und GCP bieten verschiedene Support-Pläne – von Community-Support bis zu Premium-Support-Services.</li>
+        </ul>
+      </div>
+    </section>
+    
+    <!-- Block 3 -->
+    <section id="block3">
+      <h2>Block 3: Container-Technologie vs. Virtuelle Server</h2>
+      
+      <div class="question">
+        Was ist Container-Technologie oder Container-Virtualisierung?
+      </div>
+      <div class="answer">
+        Container-Technologie ermöglicht es, Anwendungen zusammen mit allen benötigten Abhängigkeiten in einem isolierten, portablen Container zu verpacken. Container teilen sich den Kernel des Host-Systems und bieten dadurch eine leichtgewichtige Alternative zu herkömmlichen virtuellen Maschinen.
+        <div class="example">
+          Beispiel: Docker ist eine weit verbreitete Container-Plattform, die Entwicklern ermöglicht, Anwendungen in standardisierten Containern zu betreiben.
+        </div>
+      </div>
+      
+      <div class="question">
+        Was sind die Vor- und Nachteile der Container-Technologie zu virtuellen Servern (VM)?
+      </div>
+      <div class="answer">
+        <strong>Vorteile:</strong>
+        <ul>
+          <li><strong>Schneller Start:</strong> Container starten in wenigen Sekunden.</li>
+          <li><strong>Ressourceneffizienz:</strong> Geringerer Overhead, da der Kernel geteilt wird.</li>
+          <li><strong>Portabilität:</strong> Container laufen konsistent in verschiedenen Umgebungen.</li>
+        </ul>
+        <strong>Nachteile:</strong>
+        <ul>
+          <li><strong>Sicherheitsaspekte:</strong> Weniger Isolation als bei vollständigen VMs.</li>
+          <li><strong>Kernel-Abhängigkeit:</strong> Container sind auf den Host-Kernel angewiesen, was Kompatibilitätsfragen aufwerfen kann.</li>
+        </ul>
+      </div>
+      
+      <div class="question">
+        Welche Produkte kennen Sie im Zusammenhang mit virtuellen Servern und Container?
+      </div>
+      <div class="answer">
+        <strong>Virtuelle Server:</strong>
+        <ul>
+          <li>VMware vSphere</li>
+          <li>Microsoft Hyper-V</li>
+          <li>KVM (Kernel-based Virtual Machine)</li>
+        </ul>
+        <strong>Container:</strong>
+        <ul>
+          <li>Docker</li>
+          <li>containerd</li>
+          <li>rkt (Rocket)</li>
+          <li>Kubernetes (zur Orchestrierung)</li>
+        </ul>
+      </div>
+      
+      <div class="question">
+        Wie unterscheiden sich die Technologien VM und Container in Bezug auf Bereitstellung, Speicherplatz, Portabilität, Effizienz und Betriebssystem (Kernel)?
+      </div>
+      <div class="answer">
+        <ul>
+          <li><strong>Bereitstellung:</strong> VMs benötigen ein komplettes Betriebssystem, während Container nahezu sofort starten.</li>
+          <li><strong>Speicherplatz:</strong> Container sind meist deutlich kleiner, da sie nur die notwendigen Bibliotheken enthalten.</li>
+          <li><strong>Portabilität:</strong> Container können problemlos zwischen verschiedenen Umgebungen verschoben werden, solange eine Container-Laufzeit vorhanden ist.</li>
+          <li><strong>Effizienz:</strong> Container haben geringeren Overhead, da sie den Host-Kernel nutzen.</li>
+          <li><strong>Betriebssystem:</strong> VMs besitzen jeweils einen eigenen Kernel; Container teilen sich den Kernel des Hosts.</li>
+        </ul>
+      </div>
+      
+      <div class="question">
+        Können virtuelle Server immer durch Container ersetzt werden?
+      </div>
+      <div class="answer">
+        Nicht immer. Während Container für moderne, microservice-basierte Architekturen ideal sind, benötigen manche Anwendungen – insbesondere ältere oder sicherheitskritische Systeme – die vollständige Isolation, die VMs bieten.
+      </div>
+      
+      <div class="question">
+        Was ist der Unterschied zwischen Self-Managed und Fully Managed? Notieren Sie sich die wichtigsten Merkmale und diskutieren Sie die Ergebnisse in der Gruppe.
+      </div>
+      <div class="answer">
+        <strong>Self-Managed:</strong>
+        <ul>
+          <li>Der Nutzer ist für Installation, Konfiguration und Wartung selbst verantwortlich.</li>
+          <li>Bietet mehr Flexibilität, erfordert jedoch tiefgehendes technisches Know-how.</li>
+        </ul>
+        <strong>Fully Managed:</strong>
+        <ul>
+          <li>Der Anbieter übernimmt Verwaltung, Updates, Monitoring und Skalierung.</li>
+          <li>Ermöglicht den Fokus auf die Kernanwendungen, reduziert aber die direkte Kontrolle.</li>
+        </ul>
+      </div>
+    </section>
+    
+    <!-- Block 4 -->
+    <section id="block4">
+      <h2>Block 4: Container-Orchestrierung und Redis</h2>
+      
+      <div class="question">
+        Warum braucht man Container-Orchestrierung?
+      </div>
+      <div class="answer">
+        In Umgebungen mit vielen Containern über mehrere Hosts hinweg ist es notwendig, den Überblick zu behalten. Container-Orchestrierung automatisiert die Verwaltung, Skalierung, Verteilung und Fehlerbehebung der Container, was den Betrieb von komplexen Anwendungen vereinfacht.
+      </div>
+      
+      <div class="question">
+        Wie funktioniert Container-Orchestrierung?
+      </div>
+      <div class="answer">
+        Die Orchestrierung koordiniert den Einsatz von Containern, indem sie:
+        <ul>
+          <li>Container auf verfügbare Ressourcen verteilt,</li>
+          <li>den Zustand der Container überwacht,</li>
+          <li>bei Bedarf neue Instanzen startet oder fehlerhafte ersetzt,</li>
+          <li>und die Netzwerkkonnektivität sowie das Load-Balancing sicherstellt.</li>
+        </ul>
+        Tools wie Kubernetes nutzen deklarative Konfigurationen, um diese Prozesse automatisch zu steuern.
+      </div>
+      
+      <div class="question">
+        Welche Container-Orchestrierung Technologien kennen Sie?
+      </div>
+      <div class="answer">
+        Zu den bekannten Technologien zählen:
+        <ul>
+          <li>Kubernetes</li>
+          <li>Docker Swarm</li>
+          <li>Apache Mesos</li>
+          <li>Nomad</li>
+          <li>OpenShift (auf Basis von Kubernetes)</li>
+        </ul>
+      </div>
+      
+      <div class="question">
+        Was versteht man unter "Scaling Containers"?
+      </div>
+      <div class="answer">
+        Scaling Containers bedeutet, die Anzahl der Container-Instanzen dynamisch an die aktuelle Last anzupassen – horizontal skalieren, um bei hoher Nachfrage mehr Instanzen zu starten, oder Instanzen zu reduzieren, wenn die Last sinkt.
+      </div>
+      
+      <div class="question">
+        Was gibt es für Deployment Strategien?
+      </div>
+      <div class="answer">
+        Gängige Deployment-Strategien sind:
+        <ul>
+          <li><strong>Rolling Updates:</strong> Kontinuierliche Aktualisierung der Anwendung in kleinen Schritten, um Ausfallzeiten zu minimieren.</li>
+          <li><strong>Blue-Green Deployment:</strong> Paralleler Betrieb von zwei Produktionsumgebungen, um nahtlose Übergänge zu ermöglichen.</li>
+          <li><strong>Canary Releases:</strong> Neue Versionen werden schrittweise an einen Teil der Nutzer ausgerollt, um Risiken zu minimieren.</li>
+          <li><strong>Immutable Deployment:</strong> Komplette Neuaufsetzung von Instanzen, ohne bestehende zu modifizieren, was Rollbacks erleichtert.</li>
+        </ul>
+      </div>
+      
+      <div class="question">
+        Was ist Redis?
+      </div>
+      <div class="answer">
+        Redis ist ein In-Memory-Datenspeicher, der als Datenbank, Cache und Message Broker dient. Es unterstützt diverse Datenstrukturen wie Strings, Listen, Sets und Hashes und ermöglicht so sehr schnelle Lese- und Schreibzugriffe.
+      </div>
+      
+      <div class="question">
+        Welche Ports werden genutzt?
+      </div>
+      <div class="answer">
+        Standardmäßig lauscht Redis auf Port <strong>6379</strong> für Client-Verbindungen. In Cluster-Konfigurationen können zusätzlich weitere Ports für interne Kommunikation genutzt werden.
+      </div>
+      
+      <div class="question">
+        Was ist die Bedeutung von ENV im DOCKERFILE?
+      </div>
+      <div class="answer">
+        Die <strong>ENV</strong>-Anweisung im Dockerfile dient dazu, Umgebungsvariablen festzulegen. Diese Variablen stehen dem Container zur Build-Zeit und Laufzeit zur Verfügung und können zur Konfiguration von Anwendungen (z. B. für Datenbankverbindungen oder API-Schlüssel) genutzt werden.
+      </div>
+    </section>
+
+    <!-- Bilder-Galerie -->
+    <section id="images">
+      <h2>Bilder zu VM, Container, Docker Build und Orchestrierung</h2>
+      
+      <div class="image-container">
+        <img src="image_vm_container_volumes.jpg" alt="Whiteboard-Skizze: Vergleich VM, Container, Volume Mounts">
+        <div class="image-caption">Abbildung 1: Vergleich von VMs, Containern und Volume Mounts.</div>
+      </div>
+
+      <div class="image-container">
+        <img src="image_docker_build_flow.jpg" alt="Whiteboard-Skizze: Prozess docker build, docker run, docker compose">
+        <div class="image-caption">Abbildung 2: Prozessablauf von docker build zu docker run und docker compose.</div>
+      </div>
+
+      <div class="image-container">
+        <img src="image_docker_run_port_mapping.jpg" alt="Whiteboard-Skizze: docker run -d -p 8080:80">
+        <div class="image-caption">Abbildung 3: Beispielhafte Port-Mapping-Skizze für einen Docker-Container (WAN → 443 → 80).</div>
+      </div>
+
+      <div class="image-container">
+        <img src="image_openshift_config.jpg" alt="Screenshot: OpenShift Konfiguration (Deployment, Service, Route)">
+        <div class="image-caption">Abbildung 4: OpenShift-Konfiguration mit Deployment, Service und Route (YAML).</div>
+      </div>
+
+      <div class="image-container">
+        <img src="image_openshift_overview.jpg" alt="Whiteboard-Skizze: OpenShift Überblick (Front, Back, Cluster, Control Plane)">
+        <div class="image-caption">Abbildung 5: Übersicht über eine OpenShift-Architektur mit Front- und Back-Routes, Control Plane und ghcr.io.</div>
+      </div>
+    </section>
+
+    <!-- Neuer Abschnitt: Notizen -->
+    <section id="1-notes">
+      <h2>Notizen1</h2>
+      
+      <p>
+        <strong>Docker run</strong> startet in der Regel nur einen einzelnen Container, während 
+        <strong>Docker compose</strong> mehrere Container gleichzeitig ausführen kann. 
+      </p>
+      
+      <p>
+        <strong>Deployment</strong> bedeutet in einer Kubernetes-Umgebung, dass Container (Pods) aufgesetzt werden, um Code auszuführen. 
+        <strong>Service</strong> agiert innerhalb des Clusters, um diese Container erreichbar zu machen.
+      </p>
+
+      <ul>
+        <li>✅ <strong>Deployment</strong> kümmert sich darum, dass Container korrekt laufen und bei Bedarf skaliert werden.</li>
+        <li>✅ <strong>Services</strong> stellen Verbindungen zwischen den Containern her und weisen ihnen stabile Namen zu.</li>
+        <li>✅ <strong>Routing</strong> leitet externe Anfragen an die richtigen Container weiter.</li>
+      </ul>
+
+      <div class="image-container">
+        <img src="image/LB_1_Notizen/1740463408670.png" alt="Notizen LB 1">
+        <div class="image-caption">Abbildung: Weitere Notizen und Skizzen zu LB 1</div>
+      </div>
+
+      <h3>Wichtige Aspekte und Fragestellungen</h3>
+      <p><em>Im Folgenden finden Sie einige umformulierte Fragen und Antworten, die essenziell sind:</em></p>
+      <ul>
+        <li>
+          <strong>Frage:</strong> Wie gewährleisten Cloud-Anbieter ihre wirtschaftliche Rentabilität?<br>
+          <strong>Antwort:</strong> Die "Economies of Scale"
+        </li>
+        <li>
+          <strong>Frage:</strong> Welche grundlegenden Sicherheitsmechanismen stehen in Cloud-Diensten zur Verfügung?<br>
+          <strong>Antwort:</strong> Zugangskontrolle,Identitätsmanagment, Authentifizierung und Autorisierung
+
+        </li>
+        <li>
+          <strong>Frage:</strong> Nennen Sie eine Lösung, die als typisches Beispiel für Platform as a Service gilt.<br>
+          <strong>Antwort:</strong> Heroku.
+        </li>
+        <li>
+          <strong>Frage:</strong> Welcher Aspekt kann beim Cloud-Computing zum Problem werden?<br>
+          <strong>Antwort:</strong>  Keine Kontrolle über die Datenspeicherung / Eingeschränkte Kontrolle über die Datenablage.
+        </li>
+        <li>
+          <strong>Frage:</strong> Mit welchem Befehl kann ein lokaler Klon eines Git-Repositories erstellt werden?<br>
+          <strong>Antwort:</strong> git clone.
+        </li>
+        <li>
+          <strong>Frage:</strong> Welchem Servicemodell wird das Hosting eines virtuellen Servers zugeordnet?<br>
+          <strong>Antwort:</strong> IaaS (Infrastructure as a Service).
+        </li>
+        <li>
+          <strong>Frage:</strong> Welche gängigen Bereitstellungsmodelle für Cloud-Services gibt es?<br>
+          <strong>Antwort:</strong> IaaS, PaaS und SaaS.
+        </li>
+        <li>
+          <strong>Frage:</strong> Welche der folgenden Lösungen ist keine Container-Laufzeitumgebung?<br>
+          <strong>Antwort:</strong> Kubernetes (es ist eine Orchestrierungsplattform).
+        </li>
+        <li>
+          <strong>Frage:</strong> Welche Behauptung ist im Kontext von IaaS nicht korrekt?<br>
+          <strong>Antwort:</strong> Die Anwendung werden von einem Cloud Anbieter gehostet und den Kunden angeboten
+        </li>
+        <li>
+          <strong>Frage:</strong> Welches Szenario stellt in der Regel kein großes Risiko für Cloud-Computing dar?<br>
+          <strong>Antwort:</strong> Einzelne Hardware Defekte z.B kaputtes Netzteil oder sowas
+        </li>
+        <li>
+          <strong>Frage:</strong> Auf welche technische Grundlage ist Cloud-Computing angewiesen?<br>
+          <strong>Antwort:</strong> Virtualisierung.
+        </li>
+        <li>
+          <strong>Frage:</strong> Nennen Sie einen bekannten Dienst, den die Google Cloud Platform bereitstellt.<br>
+          <strong>Antwort:</strong> Kubernetes Engine GKE
+        </li>
+        <li>
+          <strong>Frage:</strong> Welches Merkmal zählt nicht zu den grundlegenden Eigenschaften des Cloud-Computings?<br>
+          <strong>Antwort:</strong> Content-Aware Network Scaling.
+        </li>
+        <li>
+          <strong>Frage:</strong> In welchem Servicemodell ist der Einfluss auf die zugrunde liegende Infrastruktur am geringsten?<br>
+          <strong>Antwort:</strong> SaaS.
+        </li>
+        <li>
+          <strong>Frage:</strong> Welche Art der Verwaltung ist bei den meisten Cloud-Plattformen unüblich?<br>
+          <strong>Antwort:</strong> Native Desktop-Anwendungen. / über die Desktop Applikation
+        </li>
+        <li>
+          <strong>Frage:</strong> Welche Herausforderung kann für Unternehmen beim Einstieg in Cloud-Technologien entstehen?<br>
+          <strong>Antwort:</strong> Sehr hohe Komplexität
+        </li>
+        <li>
+          <strong>Frage:</strong> Wie kann man Cloud-Computing kurz und knapp definieren?<br>
+          <strong>Antwort:</strong> Bereitstellung von Computerdienstleistungen
+        </li>
+        <li>
+          <strong>Frage:</strong> Welche Komponenten werden aus Kundensicht typischerweise durch Cloud Computing abgelöst?<br>
+          <strong>Antwort:</strong> Alle genannten Punkte
+        </li>
+        <li>
+          <strong>Frage:</strong> Welches der folgenden Konzepte zählt nicht zu den üblichen Cloud-Bereitstellungsmodellen?<br>
+          <strong>Antwort:</strong> Segregated Cloud.
+        </li>
+        <li>
+          <strong>Frage:</strong> Welche Leistung wird üblicherweise nicht als Cloud-Service angeboten?<br>
+          <strong>Antwort:</strong> Virtuelle Realität (VR).
+        </li>
+      </ul>
+    </section>
+    
+    <div class="footer">
+      © 2025 - Umfassender Überblick zu Cloud und Container-Technologien
+    </div>
+  </div>
+</body>
+</html>
