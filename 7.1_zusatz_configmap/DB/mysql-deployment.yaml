@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db-pod
+  labels:
+    sandbox: learn-kubernetes
+    learn-kubernetes: db-pod
+spec:
+  selector:
+    matchLabels:
+      app: db-pod
+      tier: database
+  template:
+    metadata:
+      labels:
+        app: db-pod
+        tier: database
+    spec:
+      containers:
+      - name: db-pod
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysqlpassword
+              key: password
+        image: mariadb
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - name: mysqlvolume
+          mountPath: /var/lib/mysql
+      volumes:
+       - name: mysqlvolume
+         persistentVolumeClaim:
+           claimName: mysqlvolume

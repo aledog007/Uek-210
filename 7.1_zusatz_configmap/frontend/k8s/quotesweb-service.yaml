@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: fronten-service
+    sandbox: learn-kubernetes
+    learn-kubernetes: fronten-service
+  name: fronten-service
+spec:
+  ports:
+  - name: 3000-tcp
+    port: 3000
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: fronten-pod
+  sessionAffinity: None
+  type: ClusterIP
