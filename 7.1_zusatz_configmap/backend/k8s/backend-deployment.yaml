@@ -28,4 +28,4 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: backen-config
-                  key: DB_SERVICE_NAME
+                  key: DB_SERVICE_NAME # This is the key from the ConfigMap aber kann auch eine andere variable sein
