@@ -17,7 +17,11 @@ spec:
     spec:
       containers:
       - name: html-openshift-app
+<<<<<<< HEAD
         image: ghcr.io/aledog007/html-openshift-app:v1
+=======
+        image: ghcr.io/johnsoryna/html-openshift-app:v1
+>>>>>>> 849ea02bf8dfe1c54a834c0ffd9e302ef1a67435
         imagePullPolicy: Always
         ports:
         - containerPort: 80
@@ -35,6 +39,7 @@ spec:
   ports:
     - name: http
       protocol: TCP
+      port: 8080
       port: 8080
       targetPort: 8080
   type: ClusterIP
