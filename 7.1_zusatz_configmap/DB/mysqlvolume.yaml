@@ -11,4 +11,4 @@ spec:
       storage: 5Gi
   volumeMode: Filesystem
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteOnce # This is the access mode for the volume. The volume can be mounted as read-write by a single pod
