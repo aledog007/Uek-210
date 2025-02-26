@@ -1,0 +1,12 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: counter-backend # Name des HPA
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: counter-backend # Name des Deployments
+  minReplicas: 2 # Minimale Anzahl an Replikaten
+  maxReplicas: 2 # Maximale Anzahl an Replikaten
+  targetCPUUtilizationPercentage: 80 # Ziel-CPU-Auslastung in Prozent

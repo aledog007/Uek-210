@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: counter-database # Name des Services
+spec:
+  selector:
+    app: counter-database # Selektor, der auf das Deployment zeigt
+  ports:
+  - protocol: TCP
+    port: 5432 # Service-Port
+    targetPort: 5432 # Ziel-Port im Container

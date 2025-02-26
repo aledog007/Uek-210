@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: counter-database # Name des Deployments
+spec:
+  selector:
+    matchLabels:
+      app: counter-database
+  template:
+    metadata:
+      labels:
+        app: counter-database
+    spec:
+      replicas: 1 
+      containers:
+      - name: counter-database # Name des Containers
+        image: registry.redhat.io/rhel8/postgresql-15:latest # Container-Image
+        ports:
+        - containerPort: 5432 # Container-Port
+          protocol: TCP
+        env:
+        - name: POSTGRESQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: counter-database # Name des Secrets
+              key: database-user # Schlüssel für den Datenbank-Benutzer
+        - name: POSTGRESQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: counter-database # Name des Secrets
+              key: database-password # Schlüssel für das Datenbank-Passwort
+        - name: POSTGRESQL_DATABASE
+          valueFrom:
+            secretKeyRef:
+              name: counter-database # Name des Secrets
+              key: database-name # Schlüssel für den Datenbank-Namen
+        volumeMounts:
+        - name: counter-database-data # Name des Volumes
+          mountPath: /var/lib/pgsql/data # Mount-Pfad im Container
+      volumes:
+      - name: counter-database-data # Name des Volumes
+        persistentVolumeClaim:
+          claimName: counter-database-data # Name des PersistentVolumeClaim

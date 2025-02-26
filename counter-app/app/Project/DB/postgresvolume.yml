@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: counter-database-data # Name des PersistentVolumeClaim
+spec:
+  #storageClassName: rbd-storagepool-cluster # Name der Storage Class
+  resources:
+    requests:
+      storage: 1Gi # Speicheranforderung
+  volumeMode: Filesystem # Volumenmodus
+  accessModes:
+    - ReadWriteOnce # Zugriffsmodus

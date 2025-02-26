@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: counter-frontend # Name des Deployments
+  labels:
+    app: counter-frontend
+spec:
+  replicas: 1  # Mindestens 1 Replica
+  selector:
+    matchLabels:
+      app: counter-frontend
+  template:
+    metadata:
+      labels:
+        app: counter-frontend
+    spec:
+      containers:
+      - name: counter-frontend # Name des Containers
+        image: ghcr.io/aledog007/counter-frontend:v1 # Kein 'latest'!
+        env:
+        - name: NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        - name: BACKEND_URL
+          value: "https://counter-backend-$(NAMESPACE).apps.rm1.0a51.p1.openshiftapps.com"
+        - name: npm_config_cache
+          value: ./.npm-cache # NPM Cache Konfiguration
+        ports:
+        - containerPort: 8080

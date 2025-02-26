@@ -4,3 +4,4 @@ metadata:
   name: backen-config
 data:
   DB_SERVICE_NAME: db-service
+  # DB: something heisst das es key/variable value hat und das value ist in diesem beispiel something
